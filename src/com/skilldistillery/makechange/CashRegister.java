@@ -8,13 +8,16 @@ public class CashRegister {
 		
 		System.out.println("What is the price of the item? >> ");
 		double itemPrice = kb.nextDouble(); 
-		System.out.println(itemPrice);
+//		System.out.println(itemPrice);
 		
 		System.out.println("How much money are you tendering? >> ");
 		double amountGiven = kb.nextDouble(); 
-		System.out.println(itemPrice);
+//		System.out.println(itemPrice);
 		
-		System.out.println(amountGiven - itemPrice);
+		double changeGiven = kb.nextDouble(); 
+		changeGiven = amountGiven - itemPrice; 
+		
+		System.out.println(changeGiven);
 	}
 
 }
