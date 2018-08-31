@@ -14,10 +14,30 @@ public class CashRegister {
 		double amountGiven = kb.nextDouble(); 
 //		System.out.println(itemPrice);
 		
-		double changeGiven = kb.nextDouble(); 
-		changeGiven = amountGiven - itemPrice; 
+//		double changeGiven = amountGiven - itemPrice; 
+		double changeGiven; 
 		
-		System.out.println(changeGiven);
+		if (amountGiven < itemPrice) {
+			System.out.println("You need more money! ");
+		}
+		else if (amountGiven == itemPrice) {
+//			System.out.println("Exact price given! ");
+			exactPrice();
+		}
+		else {			
+//			System.out.println(changeGiven);
+			doTheMath(); 
+		}
+		
 	}
+	
+	public static void exactPrice() {
+		System.out.println("Exact price given!! ");
+	}
+	
+	public static void doTheMath() {
+		System.out.println("Here's the math!"); 
+//		changeGiven = amountGiven - itemPrice;
+		}
 
 }
