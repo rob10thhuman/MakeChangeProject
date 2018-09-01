@@ -15,7 +15,7 @@ public class CashRegister {
 //		System.out.println(itemPrice);
 		
 //		double changeGiven = amountGiven - itemPrice; 
-		double changeGiven; 
+//		double changeGiven; 
 		
 		if (amountGiven < itemPrice) {
 			System.out.println("You need more money! ");
@@ -26,18 +26,23 @@ public class CashRegister {
 		}
 		else {			
 //			System.out.println(changeGiven);
-			doTheMath(); 
+			doTheMath(itemPrice, amountGiven); 
 		}
 		
 	}
+
+	
 	
 	public static void exactPrice() {
 		System.out.println("Exact price given!! ");
 	}
 	
-	public static void doTheMath() {
-		System.out.println("Here's the math!"); 
-//		changeGiven = amountGiven - itemPrice;
+	public static double doTheMath(double itemPrice, double amountGiven) {
+		double changeGiven; 
+		changeGiven = amountGiven - itemPrice;
+//		changeGiven = 15;
+		System.out.println("Here's the math! " + changeGiven); 
+		return changeGiven; 
 		}
 
 }
