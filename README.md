@@ -14,4 +14,6 @@ Java, my computer, the Internet and Java for Dummies
 #### Lessons Learned
 
 1. I can build a program!
-2. 
+2. Use of methods. 
+3. Use of Stringbuilder 
+4. Counting in pennies to avoid errors in counting. 
