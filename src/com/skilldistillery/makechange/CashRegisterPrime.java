@@ -1,5 +1,6 @@
 package com.skilldistillery.makechange;
 import java.util.Scanner;
+//import java.math.BigDecimal;
 
 public class CashRegister {
 
@@ -20,6 +21,22 @@ public class CashRegister {
 		System.out.print("How much money are you tendering? >> ");
 		double amountGiven = kb.nextDouble(); 
 		
+//		double changeGiven = amountGiven - itemPrice; 
+//		double changeGiven = doTheMath(itemPrice, amountGiven); 
+		
+		//talking to a friend and describing the problem, it occurred to me 
+		//that the computer doesn't know what a penny, etc., is so...
+		
+//		final double penny=.01, nickel=.05, dime=.1, quarter=.25, dollar=1.00, fiveDollar=5.00, tenDollars=10.00; 
+//		final double twenty=20.00, fifty=50.00, hundred=100.00;
+		
+		//testing
+//		double changeOwed=amountGiven - itemPrice - hundred; 
+//		System.out.println(changeOwed);
+		
+		//I think I need some form of loop
+		//have to think of a way that change owed is tested against the balance, etc 
+		
 		if (amountGiven < itemPrice) {
 			System.out.println("You need more money! ");
 		}
@@ -30,6 +47,7 @@ public class CashRegister {
 			itemPrice *=100; 
 			amountGiven *=100; 
 			doTheMath(itemPrice, amountGiven); 
+//			System.out.println(changeGiven);
 		}
 				
 		
@@ -91,16 +109,26 @@ public class CashRegister {
 						changeGiven -= nickel; 
 					}
 					else {
+//						(changeGiven > fifty) 
+						//no need to do the final math here 
+//						changeOwed.append("\n1 Penny "); 
 						changeOwed.append("\n1 Penny ");
 						changeGiven -= penny; 
 						}
 			}
-
+//		changeGiven = 15;
+//		System.out.println("Here's the math! You tendered " + "$" + amountGiven + " and are due $" + changeGiven + ".");
+			// After testing, I realized changeGiven is being reduced to zero here...
+		
+//		System.out.println("Here's the math! You tendered " + "$" + amountGiven + " and are due $" + Math.round(changeToMake) + ".");
+			// After testing, I tried to round the change but that didn't work well (rounded the .61 for example to $1
 		amountGiven = amountGiven/100; 
 		changeToMake = changeToMake/100; 
+//		changeOwed = changeOwed/100; 
 		System.out.println("\nHere's the math! \nYou tendered " + "$" + amountGiven + " and are due $" + changeToMake + ".");
 		System.out.println("\n" + changeOwed); 
 		return changeGiven;
+//		return changeOwed.toString(); 
 		}
 
 }
