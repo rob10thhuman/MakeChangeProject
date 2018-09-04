@@ -104,7 +104,7 @@ public class CashRegister {
 						changeOwed.append("\n1 Dime ");
 						changeGiven -= dime; 
 					}
-					else if (changeGiven > nickel) {
+					else if (changeGiven >= nickel) {
 						changeOwed.append("\n1 Nickel ");
 						changeGiven -= nickel; 
 					}
